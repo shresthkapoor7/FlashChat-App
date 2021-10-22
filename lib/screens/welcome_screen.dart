@@ -21,10 +21,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(
-                  Icons.bolt_outlined,
-                  color: Colors.yellow,
-                  size: 60,
+                Hero(
+                  tag: 'fire',
+                  child: Icon(
+                    Icons.bolt_outlined,
+                    color: Colors.yellow,
+                    size: 60,
+                  ),
                 ),
                 Text(
                   'Flash Chat',

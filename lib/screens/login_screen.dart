@@ -24,16 +24,19 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 48.0,
               ),
-              Icon(
-                Icons.bolt,
-                size: 150,
-                color: Colors.yellow,
+              Hero(
+                tag: 'fire',
+                child: Icon(
+                  Icons.bolt,
+                  size: 150,
+                  color: Colors.yellow,
+                ),
               ),
               SizedBox(
                 height: 48.0,
               ),
               TextField(
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
                 onChanged: (value) {
                   //Do something with the user input.
                 },
@@ -61,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 8.0,
               ),
               TextField(
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
                 onChanged: (value) {
                   //Do something with the user input.
                 },

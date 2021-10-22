@@ -33,7 +33,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 48.0,
               ),
               TextField(
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
                 onChanged: (value) {
                   //Do something with the user input.
                 },
@@ -61,7 +61,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 8.0,
               ),
               TextField(
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
                 onChanged: (value) {
                   //Do something with the user input.
                 },
