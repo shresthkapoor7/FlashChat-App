@@ -26,9 +26,12 @@ class _ChatScreenState extends State<ChatScreen> {
         ],
         title: Row(
           children: [
-            Icon(
-              Icons.bolt,
-              color: Colors.yellow,
+            Hero(
+              tag: 'fire',
+              child: Icon(
+                Icons.bolt,
+                color: Colors.yellow,
+              ),
             ),
             SizedBox(
               width: 5,

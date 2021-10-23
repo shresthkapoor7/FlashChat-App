@@ -1,16 +1,46 @@
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
+  AnimationController controller;
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+        vsync: this, upperBound: 100, duration: Duration(milliseconds: 500));
+    controller.forward();
+    controller.addListener(() {
+      setState(() {});
+      print(controller.value);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 0,
+        onPressed: () {
+          setState(() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => WelcomeScreen()),
+            );
+          });
+        },
+        child: Text(
+          '${controller.value.toInt()}%',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       backgroundColor: Colors.blueGrey.shade900,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -26,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: Icon(
                     Icons.bolt_outlined,
                     color: Colors.yellow,
-                    size: 60,
+                    size: controller.value * 0.6,
                   ),
                 ),
                 Text(
@@ -84,6 +114,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 40.0,
             ),
           ],
         ),

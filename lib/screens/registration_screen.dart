@@ -24,10 +24,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               SizedBox(
                 height: 48.0,
               ),
-              Icon(
-                Icons.bolt,
-                color: Colors.yellow,
-                size: 150,
+              Hero(
+                tag: 'fire',
+                child: Icon(
+                  Icons.bolt,
+                  color: Colors.yellow,
+                  size: 150,
+                ),
               ),
               SizedBox(
                 height: 48.0,
