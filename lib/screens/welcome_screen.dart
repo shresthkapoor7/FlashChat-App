@@ -1,7 +1,7 @@
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -11,11 +11,14 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   AnimationController controller;
+  Animation animation;
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        vsync: this, upperBound: 100, duration: Duration(milliseconds: 500));
+    controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    animation = ColorTween(begin: Colors.black87, end: Colors.blueGrey.shade900)
+        .animate(controller);
     controller.forward();
     controller.addListener(() {
       setState(() {});
@@ -24,30 +27,25 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   }
 
   @override
+  void dispose() {
+    controller.dispose();
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        elevation: 0,
-        onPressed: () {
-          setState(() {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => WelcomeScreen()),
-            );
-          });
-        },
-        child: Text(
-          '${controller.value.toInt()}%',
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-      backgroundColor: Colors.blueGrey.shade900,
+      backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -56,21 +54,45 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   child: Icon(
                     Icons.bolt_outlined,
                     color: Colors.yellow,
-                    size: controller.value * 0.6,
+                    size: 60,
                   ),
                 ),
-                Text(
-                  'Flash Chat',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
+                SizedBox(
+                  width: 260.0,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35.0,
+                      fontWeight: FontWeight.w900,
+                    ),
+                    child: AnimatedTextKit(
+                      totalRepeatCount: 1,
+                      //pause: Duration(milliseconds: 500),
+                      animatedTexts: [
+                        TypewriterAnimatedText('Flash Chat',
+                            speed: Duration(milliseconds: 100)),
+                        TypewriterAnimatedText('Lightning Fast',
+                            speed: Duration(milliseconds: 100)),
+                        TypewriterAnimatedText('Flash Chat',
+                            speed: Duration(milliseconds: 100)),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: 40.0,
+              height: 15,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30.0),
+              child: Image(
+                image: NetworkImage(
+                    'https://static.wikia.nocookie.net/bigbangtheory/images/b/b2/Flash18.png/revision/latest?cb=20161006164043'),
+              ),
+            ),
+            SizedBox(
+              height: 25,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 5.0),

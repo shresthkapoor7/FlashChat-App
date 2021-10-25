@@ -2,6 +2,10 @@ flash_chat
 2.1
 file:///home/shresth/androidprojects/FlashChat-App/
 file:///home/shresth/androidprojects/FlashChat-App/lib/
+animated_text_kit
+2.12
+file:///home/shresth/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-4.2.1/
+file:///home/shresth/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-4.2.1/lib/
 async
 2.12
 file:///home/shresth/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/
