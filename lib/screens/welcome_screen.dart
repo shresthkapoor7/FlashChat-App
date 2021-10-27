@@ -22,7 +22,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.forward();
     controller.addListener(() {
       setState(() {});
-      print(controller.value);
     });
   }
 
@@ -94,53 +93,43 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 25,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 5.0),
-              child: Material(
-                elevation: 5.0,
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(20.0),
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
-                    );
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Log In',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 5.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(20.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RegistrationScreen()),
-                    );
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Register',
-                  ),
-                ),
-              ),
-            ),
+            Button(Colors.lightBlueAccent, LoginScreen(), 'Login'),
+            Button(Colors.blueAccent, RegistrationScreen(), 'Register'),
             SizedBox(
               height: 40.0,
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class Button extends StatelessWidget {
+  final String text;
+  final Color c;
+  final Widget p;
+  Button(this.c, this.p, this.text);
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 5.0),
+      child: Material(
+        elevation: 5.0,
+        color: c,
+        borderRadius: BorderRadius.circular(20.0),
+        child: MaterialButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => p),
+            );
+          },
+          minWidth: 200.0,
+          height: 42.0,
+          child: Text(
+            text,
+          ),
         ),
       ),
     );
