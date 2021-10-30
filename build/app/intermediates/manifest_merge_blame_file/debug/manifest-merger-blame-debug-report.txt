@@ -14,69 +14,232 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->/home/shresth/androidprojects/FlashChat-App/android/app/src/debug/AndroidManifest.xml:6:5-66
 14-->/home/shresth/androidprojects/FlashChat-App/android/app/src/debug/AndroidManifest.xml:6:22-64
-15    <!--
-16     io.flutter.app.FlutterApplication is an android.app.Application that
-17         calls FlutterMain.startInitialization(this); in its onCreate method.
-18         In most cases you can leave this as-is, but you if you want to provide
-19         additional functionality it is fine to subclass or reimplement
-20         FlutterApplication and put your custom class here.
-21    -->
-22    <application
-22-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:9:5-37:19
-23        android:name="androidx.multidex.MultiDexApplication"
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/44c5543f326c7add38980e394da2ef8a/core-1.1.0/AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:12:9-43
-27        android:label="flash_chat" >
-27-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:11:9-35
-28        <activity
-28-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:13:9-32:20
-29            android:name="co.appbrewery.flash_chat.MainActivity"
-29-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:14:13-41
-30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-30-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:17:13-144
-31            android:hardwareAccelerated="true"
-31-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:18:13-47
-32            android:launchMode="singleTop"
-32-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:15:13-43
-33            android:theme="@style/LaunchTheme"
-33-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:16:13-47
-34            android:windowSoftInputMode="adjustResize" >
-34-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:19:13-55
-35
-36            <!--
-37                 This keeps the window background of the activity showing
-38                 until Flutter renders its first frame. It can be removed if
-39                 there is no splash screen (such as the default splash screen
-40                 defined in @style/LaunchTheme).
-41            -->
-42            <meta-data
-42-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:24:12-26:54
-43                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-43-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:25:5-69
-44                android:resource="@drawable/launch_background" />
-44-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:26:5-51
-45
-46            <intent-filter>
-46-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:28:13-31:29
-47                <action android:name="android.intent.action.MAIN" />
-47-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:29:17-68
-47-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:29:25-66
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:30:17-76
-49-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:30:27-74
-50            </intent-filter>
-51        </activity>
-52
-53        <meta-data
-53-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:33:5-35:25
-54            android:name="flutterEmbedding"
-54-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:34:5-36
-55            android:value="2" />
-55-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:35:5-22
-56    </application>
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+15-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:22-76
+16    <!--
+17 io.flutter.app.FlutterApplication is an android.app.Application that
+18         calls FlutterMain.startInitialization(this); in its onCreate method.
+19         In most cases you can leave this as-is, but you if you want to provide
+20         additional functionality it is fine to subclass or reimplement
+21         FlutterApplication and put your custom class here.
+22    -->
+23    <application
+23-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:9:5-37:19
+24        android:name="androidx.multidex.MultiDexApplication"
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/44c5543f326c7add38980e394da2ef8a/core-1.1.0/AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:icon="@mipmap/ic_launcher"
+27-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:12:9-43
+28        android:label="flash_chat" >
+28-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:11:9-35
+29        <activity
+29-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:13:9-32:20
+30            android:name="co.appbrewery.flash_chat.MainActivity"
+30-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:14:13-41
+31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:17:13-144
+32            android:hardwareAccelerated="true"
+32-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:18:13-47
+33            android:launchMode="singleTop"
+33-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:15:13-43
+34            android:theme="@style/LaunchTheme"
+34-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:16:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:19:13-55
+36
+37            <!--
+38                 This keeps the window background of the activity showing
+39                 until Flutter renders its first frame. It can be removed if
+40                 there is no splash screen (such as the default splash screen
+41                 defined in @style/LaunchTheme).
+42            -->
+43            <meta-data
+43-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:24:12-26:54
+44                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+44-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:25:5-69
+45                android:resource="@drawable/launch_background" />
+45-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:26:5-51
+46
+47            <intent-filter>
+47-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:28:13-31:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:29:17-68
+48-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:29:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:30:17-76
+50-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:30:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <meta-data
+54-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:33:5-35:25
+55            android:name="flutterEmbedding"
+55-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:34:5-36
+56            android:value="2" />
+56-->/home/shresth/androidprojects/FlashChat-App/android/app/src/main/AndroidManifest.xml:35:5-22
 57
-58</manifest>
+58        <service
+58-->[:firebase_auth] /home/shresth/androidprojects/FlashChat-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+59            android:name="com.google.firebase.components.ComponentDiscoveryService"
+59-->[:firebase_auth] /home/shresth/androidprojects/FlashChat-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+60            android:directBootAware="true"
+60-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+61            android:exported="false" >
+61-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:76:13-37
+62            <meta-data
+62-->[:firebase_auth] /home/shresth/androidprojects/FlashChat-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+63                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+63-->[:firebase_auth] /home/shresth/androidprojects/FlashChat-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[:firebase_auth] /home/shresth/androidprojects/FlashChat-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+65            <meta-data
+65-->[:cloud_firestore] /home/shresth/androidprojects/FlashChat-App/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+66-->[:cloud_firestore] /home/shresth/androidprojects/FlashChat-App/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[:cloud_firestore] /home/shresth/androidprojects/FlashChat-App/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+68            <meta-data
+68-->[:firebase_core] /home/shresth/androidprojects/FlashChat-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+69-->[:firebase_core] /home/shresth/androidprojects/FlashChat-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[:firebase_core] /home/shresth/androidprojects/FlashChat-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+72                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+72-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-firestore:23.0.4] /home/shresth/.gradle/caches/transforms-2/files-2.1/a08073ffbafa781206539037b996d78a/jetified-firebase-firestore-23.0.4/AndroidManifest.xml:20:13-22:85
+75                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+75-->[com.google.firebase:firebase-firestore:23.0.4] /home/shresth/.gradle/caches/transforms-2/files-2.1/a08073ffbafa781206539037b996d78a/jetified-firebase-firestore-23.0.4/AndroidManifest.xml:21:17-111
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-firestore:23.0.4] /home/shresth/.gradle/caches/transforms-2/files-2.1/a08073ffbafa781206539037b996d78a/jetified-firebase-firestore-23.0.4/AndroidManifest.xml:22:17-82
+77        </service>
+78
+79        <activity
+79-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+80            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+80-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+81            android:excludeFromRecents="true"
+81-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+82            android:exported="true"
+82-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+83            android:launchMode="singleTask"
+83-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+84-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+85            <intent-filter>
+85-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+86                <action android:name="android.intent.action.VIEW" />
+86-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+86-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
+87
+88                <category android:name="android.intent.category.DEFAULT" />
+88-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+88-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+89                <category android:name="android.intent.category.BROWSABLE" />
+89-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+89-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+90
+91                <data
+91-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+92                    android:host="firebase.auth"
+92-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+93                    android:path="/"
+93-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+94                    android:scheme="genericidp" />
+94-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+95            </intent-filter>
+96        </activity>
+97        <activity
+97-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+98            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+98-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+99            android:excludeFromRecents="true"
+99-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+100            android:exported="true"
+100-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+101            android:launchMode="singleTask"
+101-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+102            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+102-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+103            <intent-filter>
+103-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+104                <action android:name="android.intent.action.VIEW" />
+104-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+104-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
+105
+106                <category android:name="android.intent.category.DEFAULT" />
+106-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+106-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+107                <category android:name="android.intent.category.BROWSABLE" />
+107-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+107-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+108
+109                <data
+109-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+110                    android:host="firebase.auth"
+110-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+111                    android:path="/"
+111-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+112                    android:scheme="recaptcha" />
+112-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+113            </intent-filter>
+114        </activity>
+115
+116        <service
+116-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+117            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+117-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+118            android:enabled="true"
+118-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+119            android:exported="false" >
+119-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+120            <intent-filter>
+120-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+121                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+121-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+121-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+122
+123                <category android:name="android.intent.category.DEFAULT" />
+123-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+123-->[com.google.firebase:firebase-auth:21.0.1] /home/shresth/.gradle/caches/transforms-2/files-2.1/dd76a486d57dfc62d0c1e0992fb97f5a/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+124            </intent-filter>
+125        </service>
+126
+127        <provider
+127-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+128            android:name="com.google.firebase.provider.FirebaseInitProvider"
+128-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+129            android:authorities="co.shresthkapoor.flash_chat.firebaseinitprovider"
+129-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+130            android:directBootAware="true"
+130-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+131            android:exported="false"
+131-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+132            android:initOrder="100" />
+132-->[com.google.firebase:firebase-common:20.0.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e139511893b7b1153be71602efc8babb/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+133
+134        <activity
+134-->[com.google.android.gms:play-services-base:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+135            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+135-->[com.google.android.gms:play-services-base:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+136            android:exported="false"
+136-->[com.google.android.gms:play-services-base:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+137            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+137-->[com.google.android.gms:play-services-base:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+138
+139        <meta-data
+139-->[com.google.android.gms:play-services-basement:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e2e4b18dab38cfcbafc14a93723f51ea/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
+140            android:name="com.google.android.gms.version"
+140-->[com.google.android.gms:play-services-basement:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e2e4b18dab38cfcbafc14a93723f51ea/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
+141            android:value="@integer/google_play_services_version" />
+141-->[com.google.android.gms:play-services-basement:17.1.0] /home/shresth/.gradle/caches/transforms-2/files-2.1/e2e4b18dab38cfcbafc14a93723f51ea/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
+142    </application>
+143
+144</manifest>

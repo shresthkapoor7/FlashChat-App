@@ -93,8 +93,25 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 25,
             ),
-            Button(Colors.lightBlueAccent, LoginScreen(), 'Login'),
-            Button(Colors.blueAccent, RegistrationScreen(), 'Register'),
+            Button(
+                c: Colors.lightBlueAccent,
+                p: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+                text: 'Login'),
+            Button(
+                c: Colors.blueAccent,
+                p: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationScreen()),
+                  );
+                },
+                text: 'Register'),
             SizedBox(
               height: 40.0,
             ),
@@ -108,8 +125,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 class Button extends StatelessWidget {
   final String text;
   final Color c;
-  final Widget p;
-  Button(this.c, this.p, this.text);
+  final Function p;
+  Button({this.c, @required this.p, this.text});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -119,17 +136,42 @@ class Button extends StatelessWidget {
         color: c,
         borderRadius: BorderRadius.circular(20.0),
         child: MaterialButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => p),
-            );
-          },
+          onPressed: p,
           minWidth: 200.0,
           height: 42.0,
           child: Text(
             text,
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class Textfield extends StatelessWidget {
+  final String text;
+  Textfield(this.text);
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      style: TextStyle(color: Colors.white),
+      onChanged: (value) {
+        //Do something with the user input.
+      },
+      decoration: InputDecoration(
+        hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
+        hintText: text,
+        contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.blueAccent, width: 1.0),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.blueAccent, width: 2.0),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
         ),
       ),
     );
