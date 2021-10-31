@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -9,12 +10,22 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  String textMessage;
+  final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
   User loggedInUser;
   @override
   void initState() {
     getCurrentUser();
     super.initState();
+  }
+
+  void getMessages() async {
+    await for (var snapshot in _firestore.collection('messages').snapshots()) {
+      for (var message in snapshot.docs) {
+        print(message.data());
+      }
+    }
   }
 
   void getCurrentUser() async {
@@ -38,8 +49,9 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
+                //getMessages();
                 //Implement logout functionality
-                _auth.signOut();
+                // _auth.signOut();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => WelcomeScreen()),
@@ -78,13 +90,18 @@ class _ChatScreenState extends State<ChatScreen> {
                     child: TextField(
                       onChanged: (value) {
                         //Do something with the user input.
+                        textMessage = value;
                       },
                       decoration: kMessageTextFieldDecoration,
                     ),
                   ),
                   TextButton(
                     onPressed: () {
-                      //Implement send functionality.
+                      _firestore.collection('messages').add({
+                        'text': textMessage,
+                        'sender': loggedInUser.email,
+                      });
+                      // getMessages();
                     },
                     child: Text(
                       'Send',
