@@ -56,25 +56,27 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     size: 60,
                   ),
                 ),
-                SizedBox(
-                  width: 260.0,
-                  child: DefaultTextStyle(
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.w900,
-                    ),
-                    child: AnimatedTextKit(
-                      totalRepeatCount: 1,
-                      //pause: Duration(milliseconds: 500),
-                      animatedTexts: [
-                        TypewriterAnimatedText('Flash Chat',
-                            speed: Duration(milliseconds: 100)),
-                        TypewriterAnimatedText('Lightning Fast',
-                            speed: Duration(milliseconds: 100)),
-                        TypewriterAnimatedText('Flash Chat',
-                            speed: Duration(milliseconds: 100)),
-                      ],
+                Flexible(
+                  child: SizedBox(
+                    width: 260.0,
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.w900,
+                      ),
+                      child: AnimatedTextKit(
+                        totalRepeatCount: 1,
+                        //pause: Duration(milliseconds: 500),
+                        animatedTexts: [
+                          TypewriterAnimatedText('Flash Chat',
+                              speed: Duration(milliseconds: 100)),
+                          TypewriterAnimatedText('Lightning Fast',
+                              speed: Duration(milliseconds: 100)),
+                          TypewriterAnimatedText('Flash Chat',
+                              speed: Duration(milliseconds: 100)),
+                        ],
+                      ),
                     ),
                   ),
                 ),
