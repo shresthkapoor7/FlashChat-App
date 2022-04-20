@@ -1,2 +1,2 @@
 # FlashChat-App
-Login and chat using flutter and firebase
+Login and chat using Flutter and Firebase
