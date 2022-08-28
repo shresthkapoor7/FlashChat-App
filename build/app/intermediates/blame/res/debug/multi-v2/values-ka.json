@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/shresth/androidprojects/FlashChat-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
+            "outputFile": "/Users/shresthkapoor/code/flutterprojects/FlashChat-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
             "map": [
                 {
-                    "source": "/home/shresth/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/res/values-ka/values.xml",
+                    "source": "/Users/shresthkapoor/.gradle/caches/transforms-2/files-2.1/1adbe1ba5119fa83ddd12136fc967998/play-services-base-17.1.0/res/values-ka/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/shresth/.gradle/caches/transforms-2/files-2.1/44c5543f326c7add38980e394da2ef8a/core-1.1.0/res/values-ka/values-ka.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2814",
-                        "endColumns": "100",
-                        "endOffsets": "2910"
-                    }
-                },
-                {
-                    "source": "/home/shresth/.gradle/caches/transforms-2/files-2.1/e2e4b18dab38cfcbafc14a93723f51ea/jetified-play-services-basement-17.1.0/res/values-ka/values.xml",
+                    "source": "/Users/shresthkapoor/.gradle/caches/transforms-2/files-2.1/dc04d071943bd84cf67b270feb8fb567/jetified-play-services-basement-17.1.0/res/values-ka/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -52,6 +35,23 @@
                         "startOffsets": "1273",
                         "endColumns": "201",
                         "endOffsets": "1470"
+                    }
+                },
+                {
+                    "source": "/Users/shresthkapoor/.gradle/caches/transforms-2/files-2.1/d0bc41948168e53032591f6ff79cb61b/core-1.6.0/res/values-ka/values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2814",
+                        "endColumns": "100",
+                        "endOffsets": "2910"
                     }
                 }
             ]
