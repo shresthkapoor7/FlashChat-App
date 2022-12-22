@@ -8,4 +8,3 @@ A group chat application where you can login and chat created using Flutter and 
 
 
 <img src="Image1.jpeg" height="500"> <img src="2.jpeg" height="500"> <img src="3.jpeg" height="500">
-![ScreenShot](/Image1.jpeg)
