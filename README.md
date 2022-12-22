@@ -1,4 +1,11 @@
 # FlashChat
 A group chat application where you can login and chat created using Flutter and Firebase
 ### Login Screen and Chat screen
+
+
+
+<hr>
+
+
 <img src="Image1.jpeg" height="500"> <img src="2.jpeg" height="500"> <img src="3.jpeg" height="500">
+![ScreenShot](/Image1.jpeg)
